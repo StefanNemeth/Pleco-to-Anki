@@ -65,6 +65,9 @@ def convert_indiv_character(indiv_character):
     # Convert indiv char string into list of letters
     letter_list = list(indiv_character)
 
+    # Lowercase all letters (e.g. country names start with a capital letter)
+    letter_list = [w.lower() for w in letter_list]
+
     # Identify v letters, convert to ü
     for index, letter in enumerate(letter_list):
         if letter == 'v':
